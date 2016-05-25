@@ -17,26 +17,8 @@ get "/" do
   erb :home
 end
 
-class Account < ActiveRecord::Base
-  self.table_name = 'salesforce.account'
-end
-
-get "/accounts" do
-  @accounts = Account.all
-  erb :index
-end
-
-get "/" do
-  erb :home
-end
-
-
 class Contact < ActiveRecord::Base
   self.table_name = 'salesforce.contact'
-end
-
-class Account < ActiveRecord::Base
-  self.table_name = 'salesforce.account'
 end
 
 #get "/contacts" do
